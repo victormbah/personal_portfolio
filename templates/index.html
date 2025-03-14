@@ -8,21 +8,44 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <div class="social-icons">
+            <a href="https://github.com/victormbah" target="_blank">
+                <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+            </a>
+        </div>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <section class="hero">
-        <h2>Hello, I'm <span class="highlight">Victor Mbah</h2>
-        <p>A passionate developer building cool projects with Python, HTML, and CSS.</p>
-        <a href="/projects" class="btn">View My Projects</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Victor Mbah</span></h1>
+                <p>
+                    I'm a passionate developer who builds interactive and dynamic web applications with Python, HTML, and CSS.  
+                    I love solving complex problems and creating user-friendly solutions.  
+                    My projects focus on automation, real-time data, and modern web design.  
+                    I enjoy working with APIs, databases, and making websites visually stunning.  
+                    When I'm not coding, I'm learning new technologies to improve my skills.  
+                    Let’s connect and build something amazing together! 🚀  
+                </p>
+                <div class="hire-me-box">
+                    <a href="mailto:your-email@example.com" class="btn">Hire Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='profile.png') }}" alt="Victor Mbah">
+            </div>
+        </div>
     </section>
 
     <footer>
