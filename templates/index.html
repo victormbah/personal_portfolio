@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Mbah Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <img src="{{ url_for('static', filename='your-image.png') }}" alt="Victor Mbah">
-
 </head>
 <body>
 
@@ -23,45 +21,70 @@
         </nav>
     </header>
 
-    <!-- Sections -->
+    <!-- Home Section -->
     <section id="home" class="welcome-section">
         <div class="welcome-text">
             <h1>Welcome to My Portfolio</h1>
-            <p>:
-
-                👋 Hey there! I'm Victor Mbah, a passionate developer dedicated to building creative and efficient solutions.
-                
-                💻 I specialize in Python, web development, and automation, crafting digital experiences that stand out.
-                
-                🚀 My journey has been fueled by curiosity and a drive to create meaningful projects that solve real-world problems.
-                
-                📈 Whether it's designing websites, optimizing algorithms, or automating tasks, I thrive on challenges.
-                
-                🛠️ I believe in continuous learning, innovation, and leveraging technology to make an impact.
-                
+            <p>
+                👋 Hey there! I'm Victor Mbah, a passionate developer dedicated to building creative and efficient solutions.<br><br>
+                💻 I specialize in Python, web development, and automation, crafting digital experiences that stand out.<br><br>
+                🚀 My journey has been fueled by curiosity and a drive to create meaningful projects that solve real-world problems.<br><br>
+                📈 Whether it's designing websites, optimizing algorithms, or automating tasks, I thrive on challenges.<br><br>
+                🛠️ I believe in continuous learning, innovation, and leveraging technology to make an impact.<br><br>
                 📩 Feel free to explore my work, and let’s collaborate to bring ideas to life!
-                
-                </p>
+            </p>
         </div>
-        
+
         <div class="welcome-image">
-            <img src="static/profile.png" alt="Victor Mbah">
+            <img src="{{ url_for('static', filename='profile.png') }}" alt="Victor Mbah">
         </div>
     </section>
-    
-    </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-    </section>
+<!-- Projects Section -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+        <div class="project">
+            <h3>Crypto Price Checker</h3>
+            <p>A web app to track live cryptocurrency prices with a stylish UI.</p>
+            <a href="https://github.com/victormbah/crypto-price-checker" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Forex Trading Bot</h3>
+            <p>Python-based forex trading bot designed for high accuracy.</p>
+            <a href="https://github.com/victormbah/forex-bot" target="_blank">View Project</a>
+        </div>
+    </div>
+</section>
 
-    <section id="blog">
-        <h2>My Blog</h2>
-    </section>
+<!-- Blog Section -->
+<section id="blog">
+    <h2>My Blog</h2>
+    <div class="blog-container">
+        <article class="blog-post">
+            <h3>Building a Profitable Trading Bot</h3>
+            <p>Learn how I developed a high-accuracy forex trading bot using Python.</p>
+            <a href="#">Read More</a>
+        </article>
+        <article class="blog-post">
+            <h3>Mastering the Command Line</h3>
+            <p>Essential CLI commands that every developer should know.</p>
+            <a href="#">Read More</a>
+        </article>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-    </section>
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Let's connect!</p>
+    <form action="mailto:victormbah@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
     <!-- Footer with Social Icons -->
     <footer>
