@@ -3,53 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Mbah | Portfolio</title>
+    <title>Victor Mbah Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <img src="{{ url_for('static', filename='your-image.png') }}" alt="Victor Mbah">
+
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <header>
+        <h1 class="logo">Victor Mbah</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="home" class="welcome-section">
+        <div class="welcome-text">
+            <h1>Welcome to My Portfolio</h1>
+            <p>:
+
+                👋 Hey there! I'm Victor Mbah, a passionate developer dedicated to building creative and efficient solutions.
+                
+                💻 I specialize in Python, web development, and automation, crafting digital experiences that stand out.
+                
+                🚀 My journey has been fueled by curiosity and a drive to create meaningful projects that solve real-world problems.
+                
+                📈 Whether it's designing websites, optimizing algorithms, or automating tasks, I thrive on challenges.
+                
+                🛠️ I believe in continuous learning, innovation, and leveraging technology to make an impact.
+                
+                📩 Feel free to explore my work, and let’s collaborate to bring ideas to life!
+                
+                </p>
+        </div>
+        
+        <div class="welcome-image">
+            <img src="static/profile.png" alt="Victor Mbah">
+        </div>
+    </section>
+    
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+    </section>
+
+    <section id="blog">
+        <h2>My Blog</h2>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+    </section>
+
+    <!-- Footer with Social Icons -->
+    <footer>
+        <p>&copy; 2025 Victor Mbah</p>
         <div class="social-icons">
             <a href="https://github.com/victormbah" target="_blank">
                 <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
             </a>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <a href="https://linkedin.com/in/victormbah" target="_blank">
                 <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
             </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Victor Mbah</span></h1>
-                <p>
-                    I'm a passionate developer who builds interactive and dynamic web applications with Python, HTML, and CSS.  
-                    I love solving complex problems and creating user-friendly solutions.  
-                    My projects focus on automation, real-time data, and modern web design.  
-                    I enjoy working with APIs, databases, and making websites visually stunning.  
-                    When I'm not coding, I'm learning new technologies to improve my skills.  
-                    Let’s connect and build something amazing together! 🚀  
-                </p>
-                <div class="hire-me-box">
-                    <a href="mailto:your-email@example.com" class="btn">Hire Me</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="{{ url_for('static', filename='profile.png') }}" alt="Victor Mbah">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Victor Mbah. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 50;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").substring(1) === current) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
