@@ -1,128 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Mbah Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="static/style.css" />
+
+  <title>Victor Mbah | Portfolio</title>
 </head>
 <body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Victor Mbah</a>
+    </div>
 
-    <!-- Navigation Bar -->
-    <header>
-        <h1 class="logo">Victor Mbah</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="right">
+      <a href="https://github.com/victormbah" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
 
-    <!-- Home Section -->
-    <section id="home" class="welcome-section">
-        <div class="welcome-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>
-                👋 Hey there! I'm Victor Mbah, a passionate developer dedicated to building creative and efficient solutions.<br><br>
-                💻 I specialize in Python, web development, and automation, crafting digital experiences that stand out.<br><br>
-                🚀 My journey has been fueled by curiosity and a drive to create meaningful projects that solve real-world problems.<br><br>
-                📈 Whether it's designing websites, optimizing algorithms, or automating tasks, I thrive on challenges.<br><br>
-                🛠️ I believe in continuous learning, innovation, and leveraging technology to make an impact.<br><br>
-                📩 Feel free to explore my work, and let’s collaborate to bring ideas to life!
-            </p>
+      <a href="https://www.linkedin.com/in/victor-mbah-423650341" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="mailto:mbahvictor00@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Victor 👋</h2>
+        <p>
+          I'm a passionate software developer, entrepreneur, and founder of <strong>ANIMART</strong> – your go-to brand for anime merchandise, and <strong>PipsPro</strong> an AI-powered forex trading bot. I'm currently building full-stack websites using Python, HTML, CSS, and Django. I’m also exploring the world of crypto, forex bots, and gesture-based drawing apps. Let’s build something awesome together.
+        </p>
+
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+
+          <a href="#projects">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Projects</span>
+          </a>
+
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
         </div>
+      </div>
 
-        <div class="welcome-image">
-            <img src="{{ url_for('static', filename='profile.png') }}" alt="Victor Mbah">
-        </div>
+      <div class="headshot">
+        <img src="static/hero-headshot.png" alt="Victor Mbah headshot">
+      </div>
     </section>
 
-<!-- Projects Section -->
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-container">
-        <div class="project">
-            <h3>Crypto Price Checker</h3>
-            <p>A web app to track live cryptocurrency prices with a stylish UI.</p>
-            <a href="https://github.com/victormbah/crypto-price-checker" target="_blank">View Project</a>
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+        I enjoy crafting clean and user-friendly interfaces, building scalable backends, and experimenting with new tech like gesture control and trading bots. Below are some of my favorite tools and languages.
+      </div>
+
+      <div class="cells">
+        <div class="cell">
+          <img src="static/html-logo.png" alt="html logo">
+          <span>HTML</span>
         </div>
-        <div class="project">
-            <h3>Forex Trading Bot</h3>
-            <p>Python-based forex trading bot designed for high accuracy.</p>
-            <a href="https://github.com/victormbah/forex-bot" target="_blank">View Project</a>
+
+        <div class="cell">
+          <img src="static/css-logo.png" alt="css logo">
+          <span>CSS</span>
         </div>
-    </div>
-</section>
 
-<!-- Blog Section -->
-<section id="blog">
-    <h2>My Blog</h2>
-    <div class="blog-container">
-        <article class="blog-post">
-            <h3>Building a Profitable Trading Bot</h3>
-            <p>Learn how I developed a high-accuracy forex trading bot using Python.</p>
-            <a href="#">Read More</a>
-        </article>
-        <article class="blog-post">
-            <h3>Mastering the Command Line</h3>
-            <p>Essential CLI commands that every developer should know.</p>
-            <a href="#">Read More</a>
-        </article>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Interested in working together? Let's connect!</p>
-    <form action="mailto:victormbah@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-    <!-- Footer with Social Icons -->
-    <footer>
-        <p>&copy; 2025 Victor Mbah</p>
-        <div class="social-icons">
-            <a href="https://github.com/victormbah" target="_blank">
-                <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
-            </a>
-            <a href="https://linkedin.com/in/victormbah" target="_blank">
-                <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
-            </a>
+        <div class="cell">
+          <img src="static/javascript-logo.png" alt="javascript logo">
+          <span>JavaScript</span>
         </div>
-    </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll("nav ul li a");
+        <div class="cell">
+          <img src="static/python-logo.png" alt="python logo">
+          <span>Python</span>
+        </div>
 
-            window.addEventListener("scroll", () => {
-                let current = "";
+        <div class="cell">
+          <img src="static/django-logo.png" alt="django logo">
+          <span>Django</span>
+        </div>
+      </div>
+    </section>
 
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop - 50;
-                    if (scrollY >= sectionTop) {
-                        current = section.getAttribute("id");
-                    }
-                });
+    <!-- SECTION 3: Projects -->
+    <section id="projects" class="testimony-section">
+      <h2>Projects</h2>
 
-                navLinks.forEach((link) => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href").substring(1) === current) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-        });
-    </script>
+      <div class="group">
+        <div class="person-details">
+          <img src="static/animart-logo.png">
+          <p>ANIMART</p>
+          <p>Anime Merchandise Platform</p>
+        </div>
 
+        <div class="text">
+          "ANIMART is my growing online brand for anime lovers – offering unique merchandise and collectibles. Built using Django, HTML, and CSS with an e-commerce experience in mind."
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="person-details">
+          <img src="static/Forex-bot.png">
+          <p>PipsPro</p>
+          <p>Trading Automation (in progress)</p>
+        </div>
+
+        <div class="text">
+          "An AI-powered forex trading bot project designed with Python to help traders make accurate decisions. Aiming for 95%+ accuracy using smart logic and ML integration."
+        </div>
+        <a href="https://github.com/victormbah/forex-bot" target="_blank">View on GitHub</a>
+      </div>
+
+       </div>
+
+  <div class="view-all-container">
+    <a href="https://github.com/victormbah?tab=repositories" target="_blank" class="view-all-btn">
+      View All Projects
+    </a>
+  </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          Got a project or idea in mind? I'd love to hear about it. Whether you're looking to collaborate, hire, or just say hi – drop me a message!
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
